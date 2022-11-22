@@ -1,2 +1,2 @@
 #! /bin/sh
-./configure.sh ; ./build.sh ; ./build/SampleE
+./configure.sh ; ./build.sh && clear; ./build/SampleE
