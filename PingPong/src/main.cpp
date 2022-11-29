@@ -4,24 +4,20 @@
 
 
 
-Game *game = nullptr;
+int main(int argc,char *argv[]) {
+  SDL_Init(SDL_INIT_EVERYTHING);
+  SDL_Window *window = SDL_CreateWindow("Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,400,400,SDL_WINDOW_SHOWN);
+  SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, 0);
 
+  SDL_SetRenderDrawColor(renderer,0,255,0,255);
 
-int main(int argc, const char * argv[]) {
+  SDL_RenderClear(renderer);
+
   
-  game = new Game();
-  
-  game -> init("PingPong", 800 , 800);
-  game->setup();
-  while(game->running())
-  {
-    game->handleEvents();
-    game->update();
-    game->render();
+  SDL_RenderPresent(renderer);
 
-  }
 
-  game->clean();
+
   return 0;
 } 
 

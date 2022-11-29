@@ -20,5 +20,5 @@ target_link_libraries(
 	${PROJECT_NAME}	
 	SDL2main
 	SDL2
-	game
+	Game
 )
